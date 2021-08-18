@@ -15,8 +15,15 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     auth.onAuthStateChanged(user => {
-      setUser(user)
+      if(user){
+        console.log("In Auth Context")
+        console.log(auth.currentUser)
+        console.log("End Auth Context")
+      }
+      setUser(auth.currentUser)
       setLoading(false)
+      
+      //
       history.push('/chats')
     })
   }, [user, history])

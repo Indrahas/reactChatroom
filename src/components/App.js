@@ -6,7 +6,6 @@ import { AuthProvider } from "../contexts/AuthContext"
 
 import Chats from "./Chats"
 import Login from "./Login"
-
 function App() {
   return (
     <div style={{ fontFamily: 'Avenir' }}>
@@ -14,7 +13,8 @@ function App() {
         <AuthProvider>
           <Switch>
             <Route path="/chats" component={Chats} />
-            <Route path="/" component={Login} />
+            <Route path="/:customer"  component={Login} />
+            <Route path="/"  component={Login} />
           </Switch>
         </AuthProvider>
       </Router>

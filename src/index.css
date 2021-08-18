@@ -66,6 +66,11 @@
   background-color: white;
   border-radius: 22px;
 }
+.user-name{
+  padding: 12px;
+  border-radius: 8px;
+  display: inline-block;
+}
 
 .login-button {
   cursor: pointer;
